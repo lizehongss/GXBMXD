@@ -1,0 +1,17 @@
+﻿
+@model GXXD.WebUI.Models.GrandListViewModel
+@{
+    ViewBag.Title = "Grands";
+}
+@foreach (var p in Model.Grands)
+{
+    <h3>@p.Name</h3>
+    <h4>科目一：@p.科目一</h4>
+    <h4>科目二：@p.科目二</h4>
+    <h4>科目三：@p.科目三</h4>
+}
+
+
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+</div>

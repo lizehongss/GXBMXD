@@ -1,0 +1,16 @@
+﻿@model GXBMXD.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AdminLayoutPage1.cshtml";
+}
+
+<h1>登录</h1>
+
+<p>请登录</p>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+    <p><input type="submit" value="Log in" /></p>
+}

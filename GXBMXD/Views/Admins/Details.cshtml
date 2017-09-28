@@ -1,0 +1,51 @@
+﻿@model GXXD.Domain.Entities.Grand
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayoutPage1.cshtml";
+}
+
+<h2>查看</h2>
+
+<div>
+    <h4>成绩</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科目一)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科目一)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科目二)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科目二)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科目三)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科目三)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回", "Index")
+</p>

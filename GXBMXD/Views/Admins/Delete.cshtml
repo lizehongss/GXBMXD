@@ -1,0 +1,57 @@
+﻿@model GXXD.Domain.Entities.Grand
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayoutPage1.cshtml";
+}
+
+<h2>删除</h2>
+
+<h3>你确定删除吗</h3>
+<div>
+    <h4>成绩</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科目一)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科目一)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科目二)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科目二)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.科目三)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.科目三)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" /> |
+            @Html.ActionLink("返回", "Index")
+        </div>
+    }
+</div>
